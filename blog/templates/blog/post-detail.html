@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}The Mountains{% endblock  %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock  %}
+
+{% block content %}
+    <section id="summary">
+        <h2>The Mountains</h2>
+
+        <article>
+            <img src="" alt="Post Title">
+            <address>By Robert</address>
+            <div>
+                Last updated: <time>October 13th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus maiores eum! Numquam, blanditiis quaerat!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus maiores eum! Numquam, blanditiis quaerat!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus maiores eum! Numquam, blanditiis quaerat!</p>
+    </main>
+
+{% endblock  %}

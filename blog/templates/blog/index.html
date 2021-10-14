@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Blog{% endblock  %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+<link rel="stylesheet" href="{% static 'blog/posts.css' %}">
+{% endblock  %}
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/RobKelly_sm.jpg' %}" alt="Robert - the author of this blog">
+            <h2>Robert's Blog</h2>
+        </header>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, voluptatum iusto consequatur blanditiis nobis facilis.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My thoughts:</h2>
+
+        <ul>
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I write novels and code and help others whenever I can.</p>
+        <p>My goal is to keep on growing my skills and hope you do too.</p>
+    </section>
+{% endblock  %}
